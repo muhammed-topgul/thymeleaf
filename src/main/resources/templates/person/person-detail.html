@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Detail</title>
+</head>
+<body>
+
+<p th:text="${savedPerson.id}">ID</p>
+<p th:text="${savedPerson.firstName}">First Name</p>
+<p th:text="${savedPerson.lastName}">Last Name</p>
+
+<h3>Address</h3>
+<p th:text="${savedPerson?.address?.street}">Street</p>
+<p th:text="${savedPerson?.address?.state}">State</p>
+<p th:text="${savedPerson?.address?.zipCode}">Zip Code</p>
+
+</body>
+</html>

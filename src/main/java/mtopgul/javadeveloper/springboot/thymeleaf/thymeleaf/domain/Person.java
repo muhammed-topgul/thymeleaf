@@ -18,13 +18,18 @@ import lombok.Setter;
 public class Person {
 
     private Integer id;
-    private String name;
+    private String firstName;
+    private String lastName;
     private Address address;
 
-    public Person(Integer id, String name) {
+    public Person(Integer id, String firstName) {
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
     }
 
-
+    public Person(Integer id, String firstName, Address address) {
+        this.id = id;
+        this.firstName = firstName;
+        this.address = address;
+    }
 }

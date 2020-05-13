@@ -10,7 +10,7 @@
 <h2>Variable Expression</h2>
 
 <p th:text="${person.id}">ID Field</p>
-<p th:text="${person.name}">Name Field</p>
+<p th:text="${person.firstName}">Name Field</p>
 
 <h4>Address</h4>
 <p th:text="${person.address.street}"> Street </p>
@@ -20,7 +20,7 @@
 
 <div th:object="${person}">
     <p th:text="*{id}">ID Field</p>
-    <p th:text="*{name}">Name Field</p>
+    <p th:text="*{firstName}">Name Field</p>
 
     <h4>Address</h4>
     <p th:text="*{address.street}"> Street </p>
@@ -35,8 +35,8 @@
 
 <h2>Link URL Expression</h2>
 <a href="#" th:href="@{/user/1}">Link 1</a><br>
-<a href="#" th:href="@{/user(id=${person.id}, name=${person.name})}">Query String URL</a><br>
-<a href="#" th:href="@{/user/{pid}/name/{pname}(pid=${person.id}, pname=${person.name})}">Path Variable URL</a>
+<a href="#" th:href="@{/user(id=${person.id}, name=${person.firstName})}">Query String URL</a><br>
+<a href="#" th:href="@{/user/{pid}/name/{pname}(pid=${person.id}, pname=${person.firstName})}">Path Variable URL</a>
 
 </body>
 </html>

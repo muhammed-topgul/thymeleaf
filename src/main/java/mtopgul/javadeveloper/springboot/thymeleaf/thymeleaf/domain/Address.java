@@ -18,6 +18,7 @@ import lombok.Setter;
 public class Address {
 
     private String street;
+    private String state;
     private String zipCode;
 
 }

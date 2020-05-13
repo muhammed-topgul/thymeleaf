@@ -17,13 +17,13 @@ public class ConditionalExpression {
 
     @GetMapping("/conditionalExpression")
     public String conditionalExpression(Model model) {
-        Address address1 = new Address( "102 Çankaya", "520510" );
+        Address address1 = new Address( "Turkey","102 Çankaya", "520510" );
         Person muhammed = new Person( 1, "Muhammed Topgul", address1 );
 
-        Address address2 = new Address( "103 Kızılay", "520510" );
+        Address address2 = new Address( "Turkey","103 Kızılay", "520510" );
         Person cenk = new Person( 2, "Cenk Çelik", address2 );
 
-        Address address3 = new Address( "104 Cebeci", "520510" );
+        Address address3 = new Address( "Italy", "104 Cebeci", "520510" );
         Person marcus = new Person( 3, "Marcus Vitos", null );
 
         model.addAttribute( "person1", muhammed );
