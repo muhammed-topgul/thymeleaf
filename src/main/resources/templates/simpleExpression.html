@@ -32,5 +32,11 @@
 <p th:text="#{user.name}">Default User Name</p>
 <p th:text="#{project.name}">Default Project Name</p>
 
+
+<h2>Link URL Expression</h2>
+<a href="#" th:href="@{/user/1}">Link 1</a><br>
+<a href="#" th:href="@{/user(id=${person.id}, name=${person.name})}">Query String URL</a><br>
+<a href="#" th:href="@{/user/{pid}/name/{pname}(pid=${person.id}, pname=${person.name})}">Path Variable URL</a>
+
 </body>
 </html>
