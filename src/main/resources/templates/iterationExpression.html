@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Iteration Expression</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container">
+    <h2 class="table-dark">Iteration Expression</h2>
+
+    <h4 class="table-dark">Without Index</h4>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:remove="all">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+        </tr>
+        <tr th:remove="all">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+        </tr>
+        <tr th:each="p : ${people}">
+            <th scope="row">3</th>
+            <td th:text="${p.id}">Larry</td>
+            <td th:text="${p.name}">the Bird</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <hr class="table-dark">
+
+    <h4 class="table-dark">With Index - Version 1</h4>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:remove="all">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+        </tr>
+        <tr th:remove="all">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+        </tr>
+        <tr th:each="p, iter : ${people}">
+            <th scope="row" th:text="${iter.index + 1}">3</th>
+            <td th:text="${p.id}">Larry</td>
+            <td th:text="${p.name}">the Bird</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr class="table-dark">
+
+    <h4 class="table-dark">With Index - Version 2</h4>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:remove="all">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+        </tr>
+        <tr th:remove="all">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+        </tr>
+        <tr th:each="p : ${people}">
+            <th scope="row" th:text="${pStat.index + 1}">3</th>
+            <td th:text="${p.id}">Larry</td>
+            <td th:text="${p.name}">the Bird</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
