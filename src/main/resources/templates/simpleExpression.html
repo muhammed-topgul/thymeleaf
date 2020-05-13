@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Expression</title>
+</head>
+<body>
+
+<h1>Simple Expression</h1>
+<h2>Variable Expression</h2>
+
+<p th:text="${person.id}">ID Field</p>
+<p th:text="${person.name}">Name Field</p>
+
+<h4>Address</h4>
+<p th:text="${person.address.street}"> Street </p>
+<p th:text="${person.address.zipCode}"> Zip Code </p>
+</body>
+</html>
