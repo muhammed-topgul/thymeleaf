@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Expression</title>
+</head>
+<body>
+
+<h1>Conditional Expression</h1>
+
+<h2>If-Then</h2>
+
+<p th:text="${person1.address} ? ${person1.address.street} ">Default Street</p>
+<p th:text="${person2.address} ? ${person2.address.street} ">Default Street</p>
+<p th:text="${person3.address} ? ${person3.address.street} ">Default Street</p>
+
+<h2>If-Then-Else</h2>
+
+<p th:text="${person1.address} ? ${person1.address.street} : 'No Address Definition'">Default Street</p>
+<p th:text="${person2.address} ? ${person2.address.street} : 'No Address Definition'">Default Street</p>
+<p th:text="${person3.address} ? ${person3.address.street} : 'No Address Definition'">Default Street</p>
+
+<h2>Elvis Operator</h2>
+
+<p th:text="${person1.address} ?: 'No Address Definition'">Default Street</p>
+<p th:text="${person2.address} ?: 'No Address Definition'">Default Street</p>
+<p th:text="${person3.address} ?: 'No Address Definition'">Default Street</p>
+
+<h2>If-Unless</h2>
+<p th:if="${gender == 'Male'}">Male</p>
+<p th:unless="${gender == 'Male'}">Female</p>
+</body>
+</html>
