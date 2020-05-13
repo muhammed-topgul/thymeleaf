@@ -15,5 +15,17 @@
 <h4>Address</h4>
 <p th:text="${person.address.street}"> Street </p>
 <p th:text="${person.address.zipCode}"> Zip Code </p>
+
+<h2>Selection Variable Expression</h2>
+
+<div th:object="${person}">
+    <p th:text="*{id}">ID Field</p>
+    <p th:text="*{name}">Name Field</p>
+
+    <h4>Address</h4>
+    <p th:text="*{address.street}"> Street </p>
+    <p th:text="*{address.zipCode}"> Zip Code </p>
+</div>
+
 </body>
 </html>
