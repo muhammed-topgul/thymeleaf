@@ -35,8 +35,6 @@ public class EmployeeController {
         // assume save to database
         redirectAttributes.addFlashAttribute( "savedPerson", person );
         return "redirect:/detail";
-
-
     }
 
     @GetMapping("/detail")

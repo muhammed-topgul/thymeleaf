@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<header class="masthead mb-auto" th:fragment="header">
+    <div class="inner">
+        <h3 class="masthead-brand">Cover</h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#" th:href="@{/include/}">Home</a>
+            <a class="nav-link" href="#" th:href="@{/include/user}">User</a>
+            <a class="nav-link" href="#" th:href="@{/include/admin/index}">Admin</a>
+        </nav>
+    </div>
+</header>
+</body>
+</html>
